@@ -2,8 +2,12 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
+  
+  <remote name="github"
+          fetch="https://github.com/" />
+
   <default revision="refs/tags/android-12.0.0_r21"
            remote="aosp"
            sync-j="4" />
@@ -1102,5 +1106,14 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+
+  <!-- Remove unused AOSP repos -->
+  <include name="snippets/remove.xml" />
+
+  <!-- Add all LESSAOSP repos -->
+  <include name="snippets/lessaosp.xml" />  
+
+  <!-- Add some LineageOS repos -->
+  <include name="snippets/lineage.xml" />
 
 </manifest>
