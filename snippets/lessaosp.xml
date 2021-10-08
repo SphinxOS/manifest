@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="less"
+  <remote name="less12"
           fetch="https://github.com/lessaosp"
           revision="twelve" />
 
@@ -9,5 +9,57 @@
           fetch="https://github.com/Lessaosp-Devices"
           revision="twelve" />
 
+  <!-- General repos -->
+  <project name="bionic"          path="bionic"           remote="less12" />
+  <project name="build_make"      path="build/make"       remote="less12" groups="pdk" >
+    <copyfile src="core/root.mk"         dest="Makefile" />
+    <linkfile src="CleanSpec.mk"         dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core"                 dest="build/core" />
+    <linkfile src="envsetup.sh"          dest="build/envsetup.sh" />
+    <linkfile src="target"               dest="build/target" />
+    <linkfile src="tools"                dest="build/tools" />
+  </project>
+  <project name="bootable_recovery" path="bootable/recovery" remote="less12" />
+  <project name="build_soong"       path="build/soong"       remote="less12" groups="pdk,tradefed" >
+    <linkfile src="root.bp"        dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="device/aosp/sepolicy" name="device_aosp_sepolicy" remote="less12" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="less12" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" groups="qcom,pdk-qcom" remote="less12" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,pdk-qcom" remote="less12" />
 
-  </manifest>
+  <!-- External repos --> 
+  <project path="external/colorkt" name="external_colorkt" remote="less12" />
+  <project path="external/themelib" name="external_themelib" remote="less12" />
+  <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="less12" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="less12" />
+  <project path="frameworks/base" name="frameworks_base" remote="less12" />
+  <project path="frameworks/native" name="frameworks_native" remote="less12" />
+
+  <!-- Vendor repos -->
+  <project name="vendor_aosp" path="vendor/aosp" remote="less12" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="less12"  />
+
+  <!-- Package repos -->
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-fs" remote="less12" />
+  <project name="packages_apps_Settings" path="packages/apps/Settings" remote="less12" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="less12" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-fs" remote="less12" />
+
+  <!-- Manifest -->
+  <project path="manifest" name="manifest" remote="less12" />
+
+  <!-- System repos -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="less12" />
+  <project path="system/core" name="system_core" groups="pdk" remote="less12" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="less12" />  
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" groups="pdk" remote="less12" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="less12" />
+
+  <!-- Prebuilt repos -->
+  <project path="prebuilts/tools-aosp" name="platform_prebuilts_tools-aosp" remote="less12" />
+</manifest>

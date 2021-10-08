@@ -1114,6 +1114,6 @@
   <include name="snippets/lessaosp.xml" />  
 
   <!-- Add some LineageOS repos -->
-  <include name="snippets/lineage.xml" />
+  <include name="snippets/linearrow.xml" />
 
 </manifest>
