@@ -25,7 +25,7 @@
     <linkfile src="root.bp"        dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="device/aosp/sepolicy" name="device_aosp_sepolicy" remote="less12" />
+  <project path="device/lessaosp/sepolicy" name="device_lessaosp_sepolicy" remote="less12" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="less12" />
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" groups="qcom,pdk-qcom" remote="less12" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,pdk-qcom" remote="less12" />
