@@ -29,7 +29,7 @@
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" remote="less12" />
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" groups="qcom,pdk-qcom" remote="less12" />
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,pdk-qcom" remote="less12" />
-
+  <project path="system/sepolicy" name="system_sepolicy" groups="qcom,pdk-qcom" remote="less12" />
   <!-- External repos --> 
   <project path="external/colorkt" name="external_colorkt" remote="less12" />
   <project path="external/themelib" name="external_themelib" remote="less12" />
