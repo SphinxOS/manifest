@@ -9,6 +9,10 @@
           fetch="https://github.com/Lessaosp-Devices"
           revision="twelve" />
 
+  <remote name="lesslab"
+          fetch="https://gitlab.com/Aghora7"
+          revision="twelve" />
+  
   <!-- General repos -->
   <project name="bionic"          path="bionic"           remote="less12" />
   <project name="build_make"      path="build/make"       remote="less12" groups="pdk" >
@@ -42,7 +46,8 @@
   <project path="frameworks/native" name="frameworks_native" remote="less12" />
 
   <!-- Vendor repos -->
-  <project name="vendor_aosp" path="vendor/aosp" remote="less12" />
+  <project name="vendor_aosp" path="vendor/aosp" remote="lessgit" />
+  <project name="vendor_gapps" path="vendor/gapps" remote="lesslab" />
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="less12"  />
 
   <!-- Package repos -->
