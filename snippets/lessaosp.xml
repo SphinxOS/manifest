@@ -46,7 +46,7 @@
   <project path="frameworks/native" name="frameworks_native" remote="less12" />
 
   <!-- Vendor repos -->
-  <project name="vendor_aosp" path="vendor/aosp" remote="lessgit" />
+  <project name="vendor_aosp" path="vendor/aosp" remote="less12" />
   <project name="vendor_gapps" path="vendor/gapps" remote="lesslab" />
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="less12"  />
 
