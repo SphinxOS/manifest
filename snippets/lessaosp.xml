@@ -53,6 +53,7 @@
   <!-- Package repos -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" groups="pdk-fs" remote="less12" />
   <project name="packages_apps_Settings" path="packages/apps/Settings" remote="less12" />
+  <project name="packages_apps_Mantle" path="packages/apps/Mantle" remote="less12" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="less12" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-fs" remote="less12" />
 
