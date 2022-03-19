@@ -1,32 +1,29 @@
-# Pixel Experience #
+![](LESSAOSP.png)
 
-### Sync ###
+# HOW TO BUILD LESSAOSP ROM?
 
-```bash
+create a directory called as **lessaosp**
 
-# Initialize local repository
-repo init -u https://github.com/PixelExperience/manifest -b twelve
-
-# Sync
+## Initialize local repository inside lessaosp folder
+```## Initialize local repository
+repo init -u https://github.com/LessAosp/manifest -b snow
+```
+## Sync
+```## Sync
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
-
-### Build ###
-
-```bash
-
-# Set up environment
-$ . build/envsetup.sh
-
-# Choose a target
-$ lunch aosp_$device-userdebug
-
-# Build the code
-$ mka bacon -jX
+# Build Process
+```## Set up environment
+. build/envsetup.sh
 ```
 
-### Submitting Patches ###
-
-Patches are always welcome! Please submit your patches to our Gerrit.
-
-[Gerrit push guide](https://wiki.pixelexperience.org/help/submit-patch/)
+## Choose a target
+```## Choose a target
+lunch aosp_$device-userdebug
+```
+## Build the code
+```## Build the code
+make bacon -jX
+```
+# Credits
+* [PixelExperience](https://github.com/PixelExperience)
